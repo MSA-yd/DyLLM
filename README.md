@@ -41,6 +41,24 @@ bash ./scripts/run_gsm8k_acc_llada.sh # accuracy test
 bash ./scripts/run_gsm8k_llada.sh # throughput test
 ```
 
+## Dual-track plan (MSA-yd fork)
+
+This fork splits work across two machines. Do not mix roles.
+
+| Machine | Branch | Role |
+|---------|--------|------|
+| H100 | `repro-h100` | Official DyLLM reproduction only |
+| 5090 | `partial-5090` | Partial / key-delta research |
+
+Shared baseline tag: [`baseline-dyllm-repro-v1`](https://github.com/MSA-yd/DyLLM/tree/baseline-dyllm-repro-v1)
+
+**This week:** see [`docs/WEEKLY_PLAN.md`](docs/WEEKLY_PLAN.md)
+
+Weekend report templates:
+
+- [`docs/templates/h100_reproduction.md`](docs/templates/h100_reproduction.md)
+- [`docs/templates/partial_oracle.md`](docs/templates/partial_oracle.md)
+
 ## Citation
 
 If you find our code useful, please cite our paper.
